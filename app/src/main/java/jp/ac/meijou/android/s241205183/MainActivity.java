@@ -39,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
             prefDataStore.setString("name",text);
         });
 
+        prefDataStore.getString("name").ifPresent(name -> binding.text.setText(name));
+
 
         /*
          * ボタンを押したらTextViewに値をセットする
@@ -49,6 +51,12 @@ public class MainActivity extends AppCompatActivity {
                 binding.text.setText(text);
                 // binding.text.setText(R.string.name);文字を変える
             });
+
+        binding.clear.setOnClickListener(view -> {
+            var text = binding.editTextText.getText().toString();
+            binding.text.setText("");
+            // binding.text.setText(R.string.name);文字を変える
+        });
 
         /*
          * ボタンを押したら画像と文字を切り替える
@@ -61,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
 
         /*
          * EditTextの文字が変更されるたびにTextViewを変更する
-         */
+
             binding.editTextText.addTextChangedListener(new TextWatcher() {
 
                 @Override
@@ -81,7 +89,10 @@ public class MainActivity extends AppCompatActivity {
                     binding.text.setText(editable.toString());
                 }
             });
+*/
 
-        //binding.text.setText(R.string.text);
+    }   protected void onStart(){//起動時に実行（saveした文字を表示）
+        super.onStart();
+        prefDataStore.getString("name").ifPresent(name -> binding.text.setText(name));
     }
 }
