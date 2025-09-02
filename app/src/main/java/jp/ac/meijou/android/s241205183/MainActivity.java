@@ -1,12 +1,11 @@
 package jp.ac.meijou.android.s241205183;
 
 import android.graphics.Color;
-import android.hardware.camera2.params.BlackLevelPattern;
 import android.os.Bundle;
 import android.preference.PreferenceDataStore;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.widget.TextView;
+
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,7 +17,7 @@ import jp.ac.meijou.android.s241205183.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
-    private PreferenceDataStore preferenceDataStore;
+    private PrefDataStore prefDataStore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,11 +32,15 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        prefDataStore = PrefDataStore.getInstance(this);
+
+        binding.Save.setOnClickListener(view -> {
+            var text = binding.editTextText.getText().toString();
+            prefDataStore.setString("name",text);
+        });
 
 
-
-
-        /**
+        /*
          * ボタンを押したらTextViewに値をセットする
          */
 
@@ -47,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
                 // binding.text.setText(R.string.name);文字を変える
             });
 
-        /**
+        /*
          * ボタンを押したら画像と文字を切り替える
          */
         binding.button2.setOnClickListener(view -> {
@@ -56,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
             binding.imageView.setColorFilter(Color.GREEN);
         });
 
-        /**
+        /*
          * EditTextの文字が変更されるたびにTextViewを変更する
          */
             binding.editTextText.addTextChangedListener(new TextWatcher() {
