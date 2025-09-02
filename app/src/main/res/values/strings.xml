@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">モバイルアプリ</string>
+    <string name="text">Arisa</string>
+    <string name="name">Yoshio</string>
+
+
+    <string name="test">Hello!</string>
 </resources>
