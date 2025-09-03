@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="ボタンA"
+        android:text="明示的ボタンA"
         app:layout_constraintEnd_toStartOf="@id/buttonNumB"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -21,7 +21,7 @@
         android:id="@+id/buttonNumB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ボタンB"
+        android:text="暗黙的ボタンB"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/buttonNumA"
         app:layout_constraintTop_toTopOf="@id/buttonNumA"
