@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,6 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyTestApplication">
+        <activity
+            android:name=".MainActivity4"
+            android:exported="false" />
         <activity
             android:name=".MainActivity3"
             android:exported="false" />
@@ -26,7 +28,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
     </application>
 
 </manifest>
