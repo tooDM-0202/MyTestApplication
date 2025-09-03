@@ -11,7 +11,7 @@
         android:id="@+id/buttonNumber7"
         android:layout_width="70dp"
         android:layout_height="50dp"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="200dp"
         android:text="7"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,7 +31,7 @@
         android:layout_width="70dp"
         android:layout_height="50dp"
         android:layout_marginStart="10dp"
-        android:text="3"
+        android:text="6"
         app:layout_constraintStart_toEndOf="@id/buttonNumber8"
         app:layout_constraintTop_toTopOf="@id/buttonNumber8" />
 
@@ -154,7 +154,7 @@
         app:layout_constraintTop_toTopOf="@id/buttonNumberikoru" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/result"
         android:layout_width="110dp"
         android:layout_height="73dp"
         android:text="0"
