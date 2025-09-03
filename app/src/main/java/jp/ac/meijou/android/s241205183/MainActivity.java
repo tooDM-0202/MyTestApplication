@@ -2,10 +2,6 @@ package jp.ac.meijou.android.s241205183;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.preference.PreferenceDataStore;
-import android.text.Editable;
-import android.text.TextWatcher;
-
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
