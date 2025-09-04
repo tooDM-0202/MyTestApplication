@@ -14,7 +14,7 @@ import jp.ac.meijou.android.s241205183.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
     private PrefDataStore prefDataStore;
-
+//てす
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
