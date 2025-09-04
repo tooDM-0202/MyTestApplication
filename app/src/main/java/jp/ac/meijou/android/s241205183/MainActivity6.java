@@ -4,6 +4,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
@@ -46,6 +47,7 @@ public class MainActivity6 extends AppCompatActivity {
         binding.Getbutton.setOnClickListener(view ->{
 
             //binding.imageView.setColorFilter(Color.WHITE);
+            binding.progressBar.setVisibility(View.VISIBLE);
 
             var text = binding.editTextText2.getText().toString();
             // textパラメータをつけたURLの作成
